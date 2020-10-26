@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     
+    .selectBox {
+        width: 100px;
+        height: 100px;
+    }
+    .selectBox::before {
+        content:"选中了"counter(selectedCount);
+    }
+    input:checked {
+        counter-increment: selectedCount;
+    }
+</style>
+<!-- counter-increment的值，出现一次，就会累计加一次，以counter()来显示，counter是content的值 -->
+<body>
+    <h1></h1>
+    <h2></h2>
+    <div class="res"></div>
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <div class="selectBox"> </div>
+</body>
+
+</html>
