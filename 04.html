@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  input {
+    /* display: none; */
+    color: black;
+    transition: all 2s;
+  }
+
+  p {
+    position: relative;
+    margin:0;
+  }
+  p::before {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    content: attr(data-text);
+    transition: all 2s;
+  }
+  input:checked+p::before {
+    color: blue;
+    opacity: 1;
+    top: 20px;
+  }
+</style>
+<body>
+  <label for="1">我是label1</label>
+  <input id='1' type="radio" name="img">
+  <p data-text="我是input1"></p>
+  <label for="2">我是label2</label>
+  <input id='2' type="radio" name="img" >
+  <p data-text="我是input2"></p>
+</body>
+</html>
