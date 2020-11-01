@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .oneBox {
+    position: relative;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  .yuan {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  .red {
+    animation: ani1 1s linear infinite;
+    background-color: red;
+  }
+  .green {
+    background-color: green;
+    animation: ani1 1s linear 0.1s infinite;
+
+  }
+  .blue {
+    background-color: blue;
+    animation: ani1 1s linear 0.2s infinite;
+  }
+  .yellow {
+    background-color: yellow;
+    animation: ani1 1s linear 0.3s infinite;
+  }
+  @keyframes ani1 {
+    0% {
+      top: 0px;
+    }
+   50% {
+      top: 10px;
+    } 
+     100% {
+      top: 0px
+    }
+  }
+  .twoBox {
+    width: 300px;
+    height: 15px;
+  }
+</style>
+<body>
+  <div class="oneBox">
+    <div class="yuan red">
+    </div>
+    <div class="yuan green">
+    </div>
+    <div class="yuan blue">
+    </div>
+    <div class="yuan yellow">
+    </div>
+  </div>
+  <div class="twoBox">
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: skyblue;
+    transform: translate(-50%);
+  }
+  .box div{
+    width: 4px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  .blue {
+    background-color: blue;
+    animation: ani 1s ease-in-out infinite;
+  }
+  .red {
+    background-color: red;
+    animation: ani 1s ease-in-out 0.2s infinite;
+  }
+  .yellow {
+    background-color: yellow;
+    animation: ani 1s ease-in-out 0.3s infinite;
+  }
+  .green {
+    background-color: green;
+    animation: ani 1s ease-in-out 0.4s infinite;
+  }
+  @keyframes ani {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+<body>
+
+  <div class="box">
+    <div class="blue">
+    </div>
+    <div class="red"></div>
+    <div class="yellow"></div>
+    <div class="green"></div>
+  </div>
+</body>
+</html>
