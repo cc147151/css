@@ -1,33 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-     
+  </head>
+  <style>
     .selectBox {
-        width: 100px;
-        height: 100px;
+      width: 100px;
+      height: 100px;
     }
     .selectBox::before {
-        content:"选中了"counter(selectedCount);
+      content: "选中了" counter(selectedCount);
     }
     input:checked {
-        counter-increment: selectedCount;
+      counter-increment: selectedCount;
     }
-</style>
-<!-- counter-increment的值，出现一次，就会累计加一次，以counter()来显示，counter是content的值 -->
-<body>
+  </style>
+  <!-- counter-increment的值，出现一次，就会累计加一次，以counter()来显示，counter是content的值 -->
+  <body>
     <h1></h1>
     <h2></h2>
     <div class="res"></div>
-    <input type="checkbox">
-    <input type="checkbox">
-    <input type="checkbox">
-    <input type="checkbox">
-    <div class="selectBox"> </div>
-</body>
+    <input type="checkbox" />
+    <input type="checkbox" />
+    <input type="checkbox" />
+    <input type="checkbox" />
+    <div class="selectBox"></div>
+  </body>
+  <script>
+    // 31,249  = 3887
+    const rand = (Min, Max) => {
+      var Range = Max - Min;
+      var Rand = Math.random();
+      var num = Min + Math.round(Rand * Range); //四舍五入
+      return num;
+    };
+    console.log(rand(30, 250));
+    // const total = 500;
+    // const arr = [];
+    // const getArr = () => {
+    //   if (arr.length < 4) {
+    //     arr.push(rand(30, 250));
+    //     getArr();
+    //   }
+    // };
+    // getArr();
+    // const arrTotal = arr.reduce((pre, cur) => {
+    //   return pre + cur;
+    // });
+    // if(arrTotal>=total) {
 
+    // }
+    // console.log(arrTotal);
+    // console.log(arr);
+    function getrandom(minnum , maxnum ,total,size){undefined
+    var num = total; //定义整数
+    var length= size;  //定义多个整数的数量
+    var numArr = [];
+    while(length > 1){undefined
+        var rnd = Math.floor(Math.random() * num); //通过JS的随机函数生成随机数
+        num -= rnd;
+        numArr.push(rnd);
+        length --;
+    }
+    numArr.push(num);
+    console.info(numArr);
+    return numArr;
+}
+// getrandom(30,250,3877,8)
+const st1 = [704, 1519, 696, 226, 732] // 3877
+// 五组
+const a1 = getrandom(30,250,514,8)
+const a2 = getrandom(30,250,556,8)
+const a3 = getrandom(30,250,414,8)
+const a4 = getrandom(30,250,373,8)
+const a5 =getrandom(30,250,540,8)
+const a6 =getrandom(30,250,315,8)
+const a7 =getrandom(30,250,606,8)
+const a8 =getrandom(30,250,559,8)
+const arr = [...a1,...a2,...a3,...a4,...a5,...a6,...a7,...a8]
+const arrTotal = arr.reduce((pre, cur) => {
+      return pre + cur;
+    });
+console.log(arrTotal);
+  </script>
 </html>
